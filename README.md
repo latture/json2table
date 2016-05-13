@@ -57,6 +57,10 @@ and convert just as before:
 
 Installation
 ------------
+Navigate to the root directory of the `json_to_table` package from the command line and execute:
+```
+>>> python setup.py install
+```
 
 Tests
 -----
