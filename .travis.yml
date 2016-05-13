@@ -4,6 +4,6 @@ python:
 install:
   - pip install -U pip
   - pip install coveralls
-script: coverage run --source=json_to_table tests/test_json_to_table.py
+script: coverage run --source=json_to_table -m unittest tests.test_json_to_table
 after_success:
   coveralls
