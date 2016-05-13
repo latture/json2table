@@ -41,6 +41,20 @@ Changing the `build_direction` to `'TOP_TO_BOTTOM'` yields:
 
 <table><tr><th>menu</th></tr><tr><td><table><tr><th>menuitem</th><th>id</th><th>value</th></tr><tr><td><table><tr><th>onclick</th><th>value</th></tr><tr><td>CreateNewDoc()</td><td>New</td></tr><tr><td>OpenDoc()</td><td>Open</td></tr><tr><td>CloseDoc()</td><td>Close</td></tr></table></td><td>file</td><td>File</td></tr></table></td></tr></table>
 
+Table attributes are added via the `table_attributes` parameter. This parameter should be a `dict` of `(key, value)` pairs to apply to the table in the form `key="value"`.
+If in our simple example before we additionally wanted to apply a class attribute of `"table table-striped"` we would use the:
+
+```
+>>> table_attributes = {'border' : 1, 'class' : 'table table-striped'}
+```
+
+and convert just as before:
+
+```
+>>> html = convert(json_object, build_direction=build_direction, table_attributes=table_attributes)
+```
+
+
 Installation
 ------------
 
