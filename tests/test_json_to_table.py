@@ -72,5 +72,29 @@ class TestConvert(unittest.TestCase):
         self.assertEqual(result, nested_table)
 
 
+class TestJsonConverter(unittest.TestCase):
+    def setUp(self):
+        self.json_converter = JsonConverter()
+
+    def test_empty_list_of_dicts_to_column_headers(self):
+        result = self.json_converter._list_of_dicts_to_column_headers([])
+        self.assertIs(result, None)
+
+    def test_noncollapsible_list_of_dicts_to_column_headers(self):
+        result = self.json_converter._list_of_dicts_to_column_headers([{'key' : 'value'}])
+        self.assertIs(result, None)
+
+    def test_none_markup(self):
+        result = self.json_converter._markup(None)
+        self.assertEqual(result, '')
+
+    def test_list_markup(self):
+        result = self.json_converter._markup([1, 2, 3])
+        self.assertEqual(result, '<ul><li>1</li><li>2</li><li>3</li></ul>')
+
+    def test_uncommon_headers_maybe_club(self):
+        result = self.json_converter._maybe_club([None])
+        self.assertEqual(result, '<td><ul><li></li></ul></td>')
+
 if __name__ == '__main__':
     unittest.main()
