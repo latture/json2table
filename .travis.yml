@@ -1,4 +1,9 @@
 language: python
 python:
-  - "2.7"
-script: python -m unittest tests.test_json_to_table
+  - 2.7
+install:
+  - pip install -U pip
+  - pip install coveralls
+script: coverage run --source=json_to_table tests/test_json_to_table.py
+after_success:
+  coveralls
