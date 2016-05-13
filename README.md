@@ -1,14 +1,15 @@
-json_to_table
+json2table
 =============
 
-[![Build Status](https://travis-ci.org/latture/json_to_table.svg?branch=master)](https://travis-ci.org/latture/json_to_table)
-[![Coverage Status](https://coveralls.io/repos/github/latture/json_to_table/badge.svg?branch=master)](https://coveralls.io/github/latture/json_to_table?branch=master)
+[![Build Status](https://travis-ci.org/latture/json2table.svg?branch=master)](https://travis-ci.org/latture/json2table)
+[![Coverage Status](https://coveralls.io/repos/github/latture/json2table/badge.svg?branch=master)](https://coveralls.io/github/latture/json2table?branch=master)
 
 This is a simple Python packages that allows a JSON object to be converted to HTML.
 it provides a `convert` function that accepts a `dict` instance and returns a string of converted HTML.
 For example, the simple JSON object `{'key' : 'value'}` can be converted to HTML via:
 
 ```python
+>>> from json2table import convert
 >>> json_object = {'key' : 'value'}
 >>> build_direction = 'TOP_TO_BOTTOM'
 >>> table_attributes = {'border' : 1}
@@ -60,16 +61,16 @@ and convert just as before:
 
 Installation
 ------------
-Navigate to the root directory of the `json_to_table` package from the command line and execute:
+Navigate to the root directory of the `json2table` package from the command line and execute:
 ```
 >>> python setup.py install
 ```
 
 Tests
 -----
-In order to verify the code is working, from the command line navigate to the `json_to_table` root directory and run:
+In order to verify the code is working, from the command line navigate to the `json2table` root directory and run:
 
 ```
->>> python unittest -m tests.test_json_to_table
+>>> python unittest -m tests.test_json2table
 ```
 
