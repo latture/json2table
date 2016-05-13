@@ -5,7 +5,7 @@ setup(
     packages = ['json2table'],
     version = '1.0',
     description = 'Convert JSON to an HTML table',
-    long_description=open('README.md').read(),
+    long_description=open('README.rst').read(),
     author = 'Ryan Latture',
     author_email = 'ryan.latture@gmail.com',
     url = 'https://github.com/latture/json2table',
