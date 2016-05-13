@@ -11,12 +11,12 @@ class TestConvert(unittest.TestCase):
         self.simple_json = {'key' : 'value'}
         self.custom_table_attributes = {'border' : 1}
         self.nested_json = {
-        "menu": {
-        "id": "file",
-        "value": "File",
-        "menuitem": [{"value": "New", "onclick": "CreateNewDoc()"},
-                     {"value": "Open", "onclick": "OpenDoc()"},
-                     {"value": "Close", "onclick": "CloseDoc()"}]
+        'menu': {
+        'id': 'file',
+        'value': 'File',
+        'menuitem': [{'value': 'New', 'onclick': 'CreateNewDoc()'},
+                     {'value': 'Open', 'onclick': 'OpenDoc()'},
+                     {'value': 'Close', 'onclick': 'CloseDoc()'}]
     }}
 
     def test_invalid_build_direction(self):
@@ -56,7 +56,7 @@ class TestConvert(unittest.TestCase):
         self.assertEqual(result, clubbed_table)
 
     def test_nested_left_to_right(self):
-        result = convert(self.nested_json, build_direction="LEFT_TO_RIGHT")
+        result = convert(self.nested_json, build_direction='LEFT_TO_RIGHT')
         nested_table = '<table><tr><th>menu</th><td><table><tr><th>menuitem</th><td><table><tr><th>onclick</th>'\
                        '<th>value</th></tr><tr><td>CreateNewDoc()</td><td>New</td></tr><tr><td>OpenDoc()</td>'\
                        '<td>Open</td></tr><tr><td>CloseDoc()</td><td>Close</td></tr></table></td></tr><tr><th>id</th>'\
@@ -64,7 +64,7 @@ class TestConvert(unittest.TestCase):
         self.assertEqual(result, nested_table)
 
     def test_nested_top_to_bottom(self):
-        result = convert(self.nested_json, build_direction="TOP_TO_BOTTOM")
+        result = convert(self.nested_json, build_direction='TOP_TO_BOTTOM')
         nested_table = '<table><tr><th>menu</th></tr><tr><td><table><tr><th>menuitem</th><th>id</th><th>value</th></tr>'\
                        '<tr><td><table><tr><th>onclick</th><th>value</th></tr><tr><td>CreateNewDoc()</td><td>New</td></tr>'\
                        '<tr><td>OpenDoc()</td><td>Open</td></tr><tr><td>CloseDoc()</td><td>Close</td></tr></table></td>'\
