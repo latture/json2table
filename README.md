@@ -44,13 +44,13 @@ Changing the `build_direction` to `'TOP_TO_BOTTOM'` yields:
 Table attributes are added via the `table_attributes` parameter. This parameter should be a `dict` of `(key, value)` pairs to apply to the table in the form `key="value"`.
 If in our simple example before we additionally wanted to apply a class attribute of `"table table-striped"` we would use the:
 
-```
+```python
 >>> table_attributes = {'border' : 1, 'class' : 'table table-striped'}
 ```
 
 and convert just as before:
 
-```
+```python
 >>> html = convert(json_object, build_direction=build_direction, table_attributes=table_attributes)
 ```
 
@@ -58,7 +58,7 @@ and convert just as before:
 Installation
 ------------
 Navigate to the root directory of the `json_to_table` package from the command line and execute:
-```
+```python
 >>> python setup.py install
 ```
 
@@ -66,7 +66,7 @@ Tests
 -----
 In order to verify the code is working, from the command line navigate to the `json_to_table` root directory and run:
 
-```
+```python
 >>> python unittest -m tests.test_json_to_table
 ```
 
