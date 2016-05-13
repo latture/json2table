@@ -20,7 +20,7 @@ The resulting table will resemble
 More complex parsing is also possible. If a list of `dict`'s provides the same list of keys,
 the generated HTML with gather items by key and display them in the same column. 
 
-```
+```json
 {"menu": {
   "id": "file",
   "value": "File",
@@ -58,7 +58,7 @@ and convert just as before:
 Installation
 ------------
 Navigate to the root directory of the `json_to_table` package from the command line and execute:
-```python
+```
 >>> python setup.py install
 ```
 
@@ -66,7 +66,7 @@ Tests
 -----
 In order to verify the code is working, from the command line navigate to the `json_to_table` root directory and run:
 
-```python
+```
 >>> python unittest -m tests.test_json_to_table
 ```
 
