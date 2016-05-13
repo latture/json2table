@@ -1,5 +1,5 @@
 json2table
-=============
+==========
 
 [![Build Status](https://travis-ci.org/latture/json2table.svg?branch=master)](https://travis-ci.org/latture/json2table)
 [![Coverage Status](https://coveralls.io/repos/github/latture/json2table/badge.svg?branch=master)](https://coveralls.io/github/latture/json2table?branch=master)
