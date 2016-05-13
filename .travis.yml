@@ -1,0 +1,5 @@
+language: python
+python:
+  - "2.7"
+  - "3.5"
+script: python -m unittest tests.test_json_to_table
