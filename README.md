@@ -1,6 +1,7 @@
 json_to_table
 =============
 
+[![Build Status](https://travis-ci.org/latture/json_to_table.svg?branch=master)](https://travis-ci.org/latture/json_to_table)
 [![Coverage Status](https://coveralls.io/repos/github/latture/json_to_table/badge.svg?branch=master)](https://coveralls.io/github/latture/json_to_table?branch=master)
 
 This is a simple Python packages that allows a JSON object to be converted to HTML.
