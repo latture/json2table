@@ -1,6 +1,8 @@
 json_to_table
 =============
 
+[![Coverage Status](https://coveralls.io/repos/github/latture/json_to_table/badge.svg?branch=master)](https://coveralls.io/github/latture/json_to_table?branch=master)
+
 This is a simple Python packages that allows a JSON object to be converted to HTML.
 it provides a `convert` function that accepts a `dict` instance and returns a string of converted HTML.
 For example, the simple JSON object `{'key' : 'value'}` can be converted to HTML via:
