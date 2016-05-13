@@ -12,14 +12,14 @@ For example, the simple JSON object `{'key' : 'value'}` can be converted to HTML
 >>> from json2table import convert
 >>> json_object = {'key' : 'value'}
 >>> build_direction = 'TOP_TO_BOTTOM'
->>> table_attributes = {'border' : 1}
+>>> table_attributes = {'style' : 'width:100%'}
 >>> html = convert(json_object, build_direction=build_direction, table_attributes=table_attributes)
 >>> print(html)
-'<table border="1"><tr><th>key</th><td>value</td></tr></table>'
+'<table style="width:100%"><tr><th>key</th><td>value</td></tr></table>'
 ```
 
 The resulting table will resemble
-<table border="1"><tr><th>key</th><td>value</td></tr></table>
+<table style="width:100%"><tr><th>key</th><td>value</td></tr></table>
 
 More complex parsing is also possible. If a list of `dict`'s provides the same list of keys,
 the generated HTML with gather items by key and display them in the same column. 
@@ -49,7 +49,7 @@ Table attributes are added via the `table_attributes` parameter. This parameter 
 If in our simple example before we additionally wanted to apply a class attribute of `"table table-striped"` we would use the:
 
 ```python
->>> table_attributes = {'border' : 1, 'class' : 'table table-striped'}
+>>> table_attributes = {'style' : 'width:100%', 'class' : 'table table-striped'}
 ```
 
 and convert just as before:
