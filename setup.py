@@ -9,7 +9,7 @@ setup(
     author = 'Ryan Latture',
     author_email = 'ryan.latture@gmail.com',
     url = 'https://github.com/latture/json2table',
-    download_url = 'https://github.com/latture/json2table/zipball/master',
+    download_url = 'https://github.com/latture/json2table/tarball/master',
     keywords = ['json', 'HTML', 'convert', 'table'],
     license = 'MIT',
     classifiers = (
