@@ -203,12 +203,11 @@ class JsonConverter(object):
         if entry is None:
             return ''
         if isinstance(entry, list):
-            listMarkup = ''
+            list_markup = '<ul>'
             for item in entry:
-                listMarkup = '<ul><li>'
-                listMarkup += '</li><li>'.join(self._markup(child) for child in entry)
-                listMarkup += '</li></ul>'
-            return listMarkup
+                list_markup += '<li>{:s}</li>'.format(self._markup(item))
+            list_markup += '</ul>'
+            return list_markup
         if isinstance(entry, dict):
             return self.convert(entry)
 
