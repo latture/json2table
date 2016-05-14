@@ -99,8 +99,13 @@ and convert just as before:
 
 Installation
 ------------
+The easiest method on installation is to use ``pip``. Simply run:
 
-Navigate to the root directory of the ``json2table`` package from the
+::
+
+    >>> pip install json2table
+
+If instead the repo was cloned, navigate to the root directory of the ``json2table`` package from the
 command line and execute:
 
 ::
