@@ -26,9 +26,9 @@ via:
 
 The resulting table will resemble
 
-.. raw:: html
-
-  <table style="width:100%"><tr><th>key</th><td>value</td></tr></table>
++---------+-------+
+| **key** | value |
++---------+-------+
 
 More complex parsing is also possible. If a list of ``dict``'s provides
 the same list of keys, the generated HTML with gather items by key and
@@ -49,18 +49,37 @@ display them in the same column.
 
 Output:
 
-.. raw:: html
-
-  <table><tr><th>menu</th><td><table><tr><th>menuitem</th><td><table><tr><th>onclick</th><th>value</th></tr><tr><td>CreateNewDoc()</td><td>New</td></tr><tr><td>OpenDoc()</td><td>Open</td></tr><tr><td>CloseDoc()</td><td>Close</td></tr></table></td></tr><tr><th>id</th><td>file</td></tr><tr><th>value</th><td>File</td></tr></table></td></tr></table>
-
++----------+--------------+----------------+-----------+
+| **menu** | **menuitem** | **onclick**    | **value** |
++          +              +----------------+-----------+
+|          |              | CreateNewDoc() | New       |
++          +              +----------------+-----------+
+|          |              | OpenDoc()      | Open      |
++          +              +----------------+-----------+
+|          |              | CloseDoc()     | Close     |
++          +--------------+----------------+-----------+
+|          | **id**       | file                       |
++          +--------------+----------------+-----------+
+|          | **value**    | File                       |
++----------+--------------+----------------+-----------+
 
 It might, however, be more readable if we were able to build the table
 from top-to-bottom instead of left-to-right. Changing the
 ``build_direction`` to ``'TOP_TO_BOTTOM'`` yields:
 
-.. raw:: html
-  
-  <table><tr><th>menu</th></tr><tr><td><table><tr><th>menuitem</th><th>id</th><th>value</th></tr><tr><td><table><tr><th>onclick</th><th>value</th></tr><tr><td>CreateNewDoc()</td><td>New</td></tr><tr><td>OpenDoc()</td><td>Open</td></tr><tr><td>CloseDoc()</td><td>Close</td></tr></table></td><td>file</td><td>File</td></tr></table></td></tr></table>
++----------------+-----------+-------+-----------+
+| **menu**                                       |
++----------------+-----------+-------+-----------+
+| **menuitem**               | **id**| **value** |
++----------------+-----------+-------+-----------+
+| **onclick**    | **value** |  file |   File    |
++----------------+-----------+       +           +
+| CreateNewDoc() | New       |       |           | 
++----------------+-----------+       +           +
+| OpenDoc()      | Open      |       |           |
++----------------+-----------+       +           +
+| CloseDoc()     | Close     |       |           |
++----------------+-----------+-------+-----------+
 
 Table attributes are added via the ``table_attributes`` parameter. This
 parameter should be a ``dict`` of ``(key, value)`` pairs to apply to the
