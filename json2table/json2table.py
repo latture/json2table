@@ -163,7 +163,6 @@ class JsonConverter(object):
 
         return "".join(" {}=\"{}\"".format(key, value) for key, value in iter(d.items()))
 
-
     @staticmethod
     def _list_of_dicts_to_column_headers(list_of_dicts):
         """
@@ -189,7 +188,6 @@ class JsonConverter(object):
             if len(d.keys()) != len(column_headers) or not all(header in d for header in column_headers):
                 return None
         return column_headers
-
 
     def _markup(self, entry):
         """
@@ -218,7 +216,6 @@ class JsonConverter(object):
 
         # default to stringifying entry
         return str(entry)
-
 
     def _maybe_club(self, list_of_dicts):
         """
