@@ -1,3 +1,11 @@
-*.pyc
+# byte-compiled files
 __pycache__/
+*.pyc
+
+# distribution
+build/
+dist/
+sdist/
+*.egg-info/
+*.egg
 
