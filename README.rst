@@ -18,7 +18,7 @@ via:
 
     >>> from json2table import convert
     >>> json_object = {'key' : 'value'}
-    >>> build_direction = 'TOP_TO_BOTTOM'
+    >>> build_direction = 'LEFT_TO_RIGHT'
     >>> table_attributes = {'style' : 'width:100%'}
     >>> html = convert(json_object, build_direction=build_direction, table_attributes=table_attributes)
     >>> print(html)
@@ -64,7 +64,7 @@ Output:
 +----------+--------------+----------------+-----------+
 
 It might, however, be more readable if we were able to build the table
-from top-to-bottom instead of left-to-right. Changing the
+from top-to-bottom instead of the default left-to-right. Changing the
 ``build_direction`` to ``'TOP_TO_BOTTOM'`` yields:
 
 +----------------+-----------+-------+-----------+
