@@ -22,7 +22,7 @@ via:
     >>> table_attributes = {"style" : "width:100%"}
     >>> html = convert(json_object, build_direction=build_direction, table_attributes=table_attributes)
     >>> print(html)
-    "<table style="width:100%"><tr><th>key</th><td>value</td></tr></table>"
+    '<table style="width:100%"><tr><th>key</th><td>value</td></tr></table>'
 
 The resulting table will resemble
 
