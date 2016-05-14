@@ -115,8 +115,12 @@ class TestJsonConverter(unittest.TestCase):
         result = self.json_converter._list_of_dicts_to_column_headers([])
         self.assertIs(result, None)
 
-    def test_noncollapsible_list_of_dicts_to_column_headers(self):
+    def test_short_list_of_dicts_to_column_headers(self):
         result = self.json_converter._list_of_dicts_to_column_headers([{'key' : 'value'}])
+        self.assertIs(result, None)
+
+    def test_noncollapsible_list_of_dicts_to_column_headers(self):
+        result = self.json_converter._list_of_dicts_to_column_headers([{'key' : 'value'}, {'value' : 'key'}])
         self.assertIs(result, None)
 
     def test_none_markup(self):
