@@ -8,11 +8,7 @@ json2table
 .. |Coverage Status| image:: https://coveralls.io/repos/github/latture/json2table/badge.svg?branch=master
    :target: https://coveralls.io/github/latture/json2table?branch=master
 
-This is a simple Python packages that allows a JSON object to be
-converted to HTML. it provides a ``convert`` function that accepts a
-``dict`` instance and returns a string of converted HTML. For example,
-the simple JSON object ``{"key" : "value"}`` can be converted to HTML
-via:
+This is a simple Python packages that allows a JSON object to be converted to HTML. it provides a ``convert`` function that accepts a ``dict`` instance and returns a string of converted HTML. For example, the simple JSON object ``{"key" : "value"}`` can be converted to HTML via:
 
 .. code:: python
 
@@ -30,9 +26,7 @@ The resulting table will resemble
 | **key** | value |
 +---------+-------+
 
-More complex parsing is also possible. If a list of ``dict``'s provides
-the same list of keys, the generated HTML with gather items by key and
-display them in the same column.
+More complex parsing is also possible. If a list of ``dict``'s provides the same list of keys, the generated HTML with gather items by key and display them in the same column.
 
 .. code:: json
 
@@ -63,9 +57,7 @@ Output:
 |          | **value**    | File                       |
 +----------+--------------+----------------+-----------+
 
-It might, however, be more readable if we were able to build the table
-from top-to-bottom instead of the default left-to-right. Changing the
-``build_direction`` to ``"TOP_TO_BOTTOM"`` yields:
+It might, however, be more readable if we were able to build the table from top-to-bottom instead of the default left-to-right. Changing the ``build_direction`` to ``"TOP_TO_BOTTOM"`` yields:
 
 +----------------+-----------+-------+-----------+
 | **menu**                                       |
@@ -81,11 +73,7 @@ from top-to-bottom instead of the default left-to-right. Changing the
 | CloseDoc()     | Close     |       |           |
 +----------------+-----------+-------+-----------+
 
-Table attributes are added via the ``table_attributes`` parameter. This
-parameter should be a ``dict`` of ``(key, value)`` pairs to apply to the
-table in the form ``key="value"``. If in our simple example before we
-additionally wanted to apply a class attribute of
-``"table table-striped"`` we would use the following:
+Table attributes are added via the ``table_attributes`` parameter. This parameter should be a ``dict`` of ``(key, value)`` pairs to apply to the table in the form ``key="value"``. If in our simple example before we additionally wanted to apply a class attribute of ``"table table-striped"`` we would use the following:
 
 .. code:: python
 
@@ -99,8 +87,7 @@ and convert just as before:
 
 Details
 -------
-This module provides a single ``convert`` function. It takes as input the JSON object (represented as a Python ``dict``)
-and, optionally, a build direction and a dictionary of table attributes to customize the generated table: 
+This module provides a single ``convert`` function. It takes as input the JSON object (represented as a Python ``dict``) and, optionally, a build direction and a dictionary of table attributes to customize the generated table: 
 
 ``convert(json_input, build_direction="LEFT_TO_RIGHT", table_attributes=None)``
 
@@ -139,8 +126,7 @@ The easiest method on installation is to use ``pip``. Simply run:
 
     >>> pip install json2table
 
-If instead the repo was cloned, navigate to the root directory of the ``json2table`` package from the
-command line and execute:
+If instead the repo was cloned, navigate to the root directory of the ``json2table`` package from the command line and execute:
 
 ::
 
@@ -149,8 +135,7 @@ command line and execute:
 Tests
 -----
 
-In order to verify the code is working, from the command line navigate
-to the ``json2table`` root directory and run:
+In order to verify the code is working, from the command line navigate to the ``json2table`` root directory and run:
 
 ::
 
