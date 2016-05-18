@@ -85,7 +85,7 @@ Table attributes are added via the ``table_attributes`` parameter. This
 parameter should be a ``dict`` of ``(key, value)`` pairs to apply to the
 table in the form ``key="value"``. If in our simple example before we
 additionally wanted to apply a class attribute of
-``"table table-striped"`` we would use the:
+``"table table-striped"`` we would use the following:
 
 .. code:: python
 
