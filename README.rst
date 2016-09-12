@@ -107,7 +107,7 @@ build_direction : ``{"TOP_TO_BOTTOM", "LEFT_TO_RIGHT"}``, optional
 table_attributes : ``dict``, optional
 
   Dictionary of ``(key, value)`` pairs describing attributes to add to the table. 
-  Each attribute is added according to the template ``key="value". For example, 
+  Each attribute is added according to the template ``key="value"``. For example, 
   the table ``{ "border" : 1 }`` modifies the generated table tags to include 
   ``border="1"`` as an attribute. The generated opening tag would look like 
   ``<table border="1">``. Default is ``None``.
@@ -139,4 +139,4 @@ In order to verify the code is working, from the command line navigate to the ``
 
 ::
 
-    >>> python unittest -m tests.test_json2table
+    >>> python -m unittest tests.test_json2table
