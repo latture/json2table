@@ -8,7 +8,7 @@ json2table
 .. |Coverage Status| image:: https://coveralls.io/repos/github/latture/json2table/badge.svg?branch=master
    :target: https://coveralls.io/github/latture/json2table?branch=master
 
-This is a simple Python packages that allows a JSON object to be converted to HTML. it provides a ``convert`` function that accepts a ``dict`` instance and returns a string of converted HTML. For example, the simple JSON object ``{"key" : "value"}`` can be converted to HTML via:
+This is a simple Python package that allows a JSON object to be converted to HTML. it provides a ``convert`` function that accepts a ``dict`` instance and returns a string of converted HTML. For example, the simple JSON object ``{"key" : "value"}`` can be converted to HTML via:
 
 .. code:: python
 
