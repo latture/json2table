@@ -3,7 +3,7 @@ from setuptools import setup
 setup(
     name = "json2table",
     packages = ["json2table"],
-    version = "1.1.4",
+    version = "1.1.5",
     description = "Convert JSON to an HTML table",
     long_description=open("README.rst").read(),
     author = "Ryan Latture",
